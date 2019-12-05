@@ -1,0 +1,31 @@
+<% include headers %>
+
+<div class="container">
+  <div class="container" class="btn btn-outline-info my-2 my-sm-0 mr-3 text-uppercase"  >
+    <a href="/new"class="btn btn-outline-info my-2 my-sm-0 mr-3 text-uppercase">Add new Blog! 
+    </a>
+  </div>
+
+  <div
+    class="row text-center"
+    style="display:flex; flex-wrap: wrap; padding-top: 10%;"
+  >
+    <% Blogtech.forEach(function(Blog){ %>
+    <div class="col-md-3 col-sm-6">
+      <div class="thumbnail">
+        <img src="<%= Blog.image %>" />
+        <div class="caption">
+          <h4 style="color:darkred; font-size:2rem; font-weight:bold;">
+            <%= Blog.title %>
+          </h4>
+        </div>
+        <p>
+          <a href="/<%= Blog._id %>" class="btn btn-primary">More Info</a>
+        </p>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</div>
+
+<% include footers %>

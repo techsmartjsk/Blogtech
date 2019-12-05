@@ -1,0 +1,40 @@
+<% include headers %>
+
+
+<div class="container" style="padding-top:10%; padding-bottom:10%;">
+  <form action="/login" method="POST">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
+      <div class="col-sm-10">
+        <input
+          type="username"
+          class="form-control"
+          name="username"
+          placeholder="Email"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label"
+        >Password</label
+      >
+      <div class="col-sm-10">
+        <input
+          type="password"
+          class="form-control"
+          id="inputPassword3"
+          name="password"
+          placeholder="Password"
+        />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary">LogIn!</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<% include footers %>

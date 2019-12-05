@@ -1,0 +1,42 @@
+<% include headers %>
+<div class="container" style="padding-top:10%; padding-bottom:10%;">
+  <div>
+    <h1 style="font-size: 3 rem;">Edit <%= Blog.title%></h1>
+    <div
+      style="width: 30%; margin: 25px auto; padding-top:10%;"
+      class="container"
+    >
+      <form action="/<%= Blog._id%>?_method=PUT" method="POST">
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="Blog[title]"
+            value="<%=Blog.title%>"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="Blog[image]"
+            value="<%=Blog.image%>"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="Blog[content]"
+            value="<%= Blog.content %>"
+          />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+        </div>
+      </form>
+      <a href="/">Go Back</a>
+    </div>
+  </div>
+</div>
+<% include footers %>
